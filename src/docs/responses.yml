@@ -1,0 +1,186 @@
+components:
+  schema:
+    Products:
+      product:
+        type: object
+        properties:
+          id:
+            type: string
+            description: Id del producto
+          tittle:
+            type: string
+            description: Nombre del producto
+          description:
+            type: string
+            description: Breve descripcion del producto
+          code:
+            type: string
+            description: Codigo alfanumerico del producto
+          price:
+            type: number
+            description: Precio del producto
+          status:
+            type: boolean
+            description: Indica si el producto esta a la venta o no
+          stock:
+            type: number
+            description: Disponibilidad del producto
+          category:
+            type: string
+            description: Categoria a la que pertenece el producto
+        example:
+          id: 'aADAWD189daw77891gfgdh7h8t13'
+          title: 'Termo de aluminio'
+          decription: 'Termo Bala 1 Litro Acero Inoxidable Doble Capa Termica'
+          code: 'T1LIXCT'
+          price: 5750
+          status: true
+          stock: 22
+          category: 'Camping, Caza y Pesca'
+      getAllProducts:
+        type: array
+        items:
+          properties:
+            id:
+              type: string
+              description: Id del producto
+            tittle:
+              type: string
+              description: Nombre del producto
+            description:
+              type: string
+              description: Breve descripcion del producto
+            code:
+              type: string
+              description: Codigo alfanumerico del producto
+            price:
+              type: number
+              description: Precio del producto
+            status:
+              type: boolean
+              description: Indica si el producto esta a la venta o no
+            stock:
+              type: number
+              description: Disponibilidad del producto
+            category:
+              type: string
+              description: Categoria a la que pertenece el producto
+          example:
+            id: 'aADAWD189daw77891gfgdh7h8t13'
+            title: 'Termo de aluminio'
+            decription: 'Termo Bala 1 Litro Acero Inoxidable Doble Capa Termica'
+            code: 'T1LIXCT'
+            price: 5750
+            status: true
+            stock: 22
+            category: 'Camping, Caza y Pesca'
+      getById:
+        type: object
+        properties:
+          id:
+            type: string
+            description: Id del producto
+          tittle:
+            type: string
+            description: Nombre del producto
+          description:
+            type: string
+            description: Breve descripcion del producto
+          code:
+            type: string
+            description: Codigo alfanumerico del producto
+          price:
+            type: number
+            description: Precio del producto
+          status:
+            type: boolean
+            description: Indica si el producto esta a la venta o no
+          stock:
+            type: number
+            description: Disponibilidad del producto
+          category:
+            type: string
+            description: Categoria a la que pertenece el producto
+        example:
+          id: 'aADAWD189daw77891gfgdh7h8t13'
+          title: 'Termo de aluminio'
+          decription: 'Termo Bala 1 Litro Acero Inoxidable Doble Capa Termica'
+          code: 'T1LIXCT'
+          price: 5750
+          status: true
+          stock: 22
+          category: 'Camping, Caza y Pesca'
+      validationError:
+        type: object
+        properties:
+          msg:
+            type: string
+            description: Error de validacion de schema
+        example:
+          msg: Validation Schema Error
+      notFoundError:
+        type: object
+        properties:
+          msg:
+            type: string
+            description: Error de servidor
+        example:
+          msg: Error de servidor
+      getByIdError:
+        type: object
+        properties:
+          msg:
+            type: string
+            description: Error de busqueda por id
+        example:
+          msg: Producto no encontrado
+    Users:
+      user:
+        type: object
+        properties: 
+          status:
+            type: number
+            description: Código de estado de la petición
+          message:
+            type: string
+            description: Estado de la petición
+          data:
+            type: string
+            description: Token del usuario autenticado
+        example:
+          status: 200
+          message: Success
+          data: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGU1MzZhZjU5ZGM3ZDcwZTczZDhjYWMiLCJpYXQiOjE2OTMzOTMzODIsImV4cCI6MTY5MzM5NDI4Mn0.3t3rqyv_3CPzd6yNnJgPvifmw2IBvY0Il7eqc4Zgh_w    
+    Carts:
+      cart:
+        type: object
+        items:
+          properties:
+            id:
+              type: string
+              description: Id del producto
+            products:
+              type: array
+              description: Productos en carrito
+      getAllCarts:
+        type: array
+        items:
+          properties:
+            id:
+              type: string
+              description: Id del producto
+            products:
+              type: array
+              description: Productos en carrito
+      getById:
+        type: object
+        items:
+          properties:
+            id:
+              type: string
+              description: Id del producto
+            products:
+              type: array
+              description: Productos en carrito
+
+    

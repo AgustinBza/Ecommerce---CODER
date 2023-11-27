@@ -1,0 +1,158 @@
+paths:
+  /api/products:
+    post:
+      tags:
+       - Products
+      summary: Registro de producto nuevo en la base de datos
+      requestBody:
+        content:
+         aplication/json:
+          schema:
+            $ref: '#/components/parameters/schemas/BodyProductPost'
+        required: true
+      responses:
+        200:
+          description: Se registra el producto exitosamente.
+          content:
+            aplication/json:
+              schema:
+                $ref: '#/components/schema/Products/product'
+    get:
+      tags:
+      - Products
+      summary: Muestro todos los productos de la base de datos
+      responses:
+        200:
+          description: Busqueda exitosa
+          content:
+            aplication/json:
+              schema:
+                $ref: '#/components/schema/Products/getAllProducts'
+  /api/products/{id}:
+    get:
+      tags:
+       - Products
+      summary: Busqueda de producto por id
+      parameters:
+        - in: path
+          name: id
+          requierd: true
+          description: id redeferente al producto
+          schema:
+            type: string
+      responses:
+        200:
+          description: Producto Encontrado
+          content:
+            aplication/json:
+              schema:
+                $ref: '#/components/schema/Products/getById'
+    delete:
+      tags:
+       - Products
+      summary: Eliminamos producto con una busqueda por id
+      parameters:
+        - in: path
+          name: id
+          requierd: true
+          description: id redeferente al producto
+          schema:
+            type: string
+      responses:
+        200:
+          description: Producto Eliminado
+          content:
+            aplication/json:
+              schema:
+                $ref: '#/components/schema/Products/getById'
+    put:
+      tags:
+       - Products
+      summary: Actualizamos producto por id
+      parameters:
+        - in: path
+          name: id
+          requierd: true
+          description: id redeferente al producto
+          schema:
+            type: string
+      requestBody:
+        content:
+         aplication/json:
+          schema:
+            $ref: '#/components/parameters/schemas/BodyProductPut'
+        required: true
+      responses:
+        200:
+          description: Se modifica el producto exitosamente.
+          content:
+            aplication/json:
+              schema:
+                $ref: '#/components/schema/Products/product'
+  /users/login:
+    post:
+      tags:
+       - Users
+      summary: Login de usuarios
+      requestBody:
+        content:
+         aplication/json:
+          schema:
+            $ref: '#/components/parameters/schemas/login'
+        required: true
+      responses:
+        200:
+          description: Busqueda exitosa
+          content:
+            aplication/json:
+              schema:
+                $ref: '#/components/schema/Users/user'
+  /api/carts:
+    get:
+      tags:
+       - Carts
+      summary: Traemos todos los carritos de la base de datos
+      responses:
+        200:
+          description: Busqueda exitosa
+          content:
+            aplication/json:
+              schema:
+                $ref: '#/components/schema/Carts/getAllCarts'
+  /api/carts/{id}:
+    get:
+        tags:
+        - Carts
+        summary: Busqueda de carrito por id
+        parameters:
+          - in: path
+            name: id
+            requierd: true
+            description: id redeferente al carrito
+            schema:
+              type: string
+        responses:
+          200:
+            description: Carrito Encontrado
+            content:
+              aplication/json:
+                schema:
+                  $ref: '#/components/schema/Carts/getById'
+    delete:
+      tags:
+       - Carts
+      summary: Eliminamos  todos los productos del carrito con una busqueda por id
+      parameters:
+        - in: path
+          name: id
+          requierd: true
+          description: id redeferente al carrito
+          schema:
+            type: string
+      responses:
+        200:
+          description: Productos eliminados del carrito
+          content:
+            aplication/json:
+              schema:
+                $ref: '#/components/schema/Carts/getById'

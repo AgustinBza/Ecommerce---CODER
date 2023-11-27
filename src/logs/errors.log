@@ -1,0 +1,29 @@
+
+[31merror[39m | 2023-10-12T00:20:19.353Z | Error en la ejecucion del Proceso de resetPass del DAO de Usuarios
+[31merror[39m | 2023-10-12T00:21:10.126Z | Error en la ejecucion del Proceso de resetPass del DAO de Usuarios
+[31merror[39m | 2023-10-12T00:22:16.242Z | Error en la ejecucion del Proceso de resetPass del DAO de Usuarios
+[31merror[39m | 2023-10-12T00:23:29.414Z | Error en la ejecucion del Proceso de resetPass del DAO de Usuarios
+[31merror[39m | 2023-10-12T00:31:14.427Z | Error en el Servicio generateToken
+[31merror[39m | 2023-10-12T00:33:18.304Z | Error en el Servicio generateToken
+[31merror[39m | 2023-10-12T00:34:25.137Z | Error en el Servicio generateToken
+[31merror[39m | 2023-10-12T00:42:14.797Z | Error en la ejecucion del Envio de Email
+[31merror[39m | 2023-10-12T00:43:42.078Z | Error
+[31merror[39m | 2023-10-12T00:43:54.230Z | createMsgReset is not defined
+[31merror[39m | 2023-10-12T00:56:41.827Z | Error en la ejecucion del Proceso de updatePass del DAO de Usuarios
+[31merror[39m | 2023-10-12T00:57:04.090Z | data must be a string or Buffer and hash must be a string
+[31merror[39m | 2023-10-31T01:03:31.094Z | Error en la ejecucion del proceso de getById del DAO Padre
+[31merror[39m | 2023-11-05T21:29:49.750Z | Error en la ejecucion del proceso de create del DAO Padre
+[31merror[39m | 2023-11-05T21:30:52.754Z | Error en la ejecucion del proceso de create del DAO Padre
+[31merror[39m | 2023-11-05T21:32:23.849Z | Error en la ejecucion del proceso de create del DAO Padre
+[31merror[39m | 2023-11-05T22:15:10.562Z | prodId is not defined
+[31merror[39m | 2023-11-05T22:15:41.112Z | responsePremium is not defined
+[31merror[39m | 2023-11-21T02:40:15.082Z | Error en el Servicio de getByIdDTO
+[31merror[39m | 2023-11-21T02:40:46.856Z | Error en el Servicio de getByIdDTO
+[31merror[39m | 2023-11-21T02:41:14.699Z | Error en el Servicio de getAllDto
+[31merror[39m | 2023-11-21T02:41:36.647Z | userRepository.getAllDto is not a function
+[31merror[39m | 2023-11-21T02:42:32.006Z | user is not defined
+[31merror[39m | 2023-11-24T01:47:57.611Z | Cannot set headers after they are sent to the client
+[31merror[39m | 2023-11-24T01:53:31.566Z | sendMail is not defined
+[31merror[39m | 2023-11-24T02:01:50.725Z | sendMailDeletPremium is not defined
+[31merror[39m | 2023-11-24T02:03:05.308Z | product is not defined
+[31merror[39m | 2023-11-24T02:04:55.696Z | product is not defined
