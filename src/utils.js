@@ -60,5 +60,3 @@ export const errorDictionary = {
   DELETE_ALL_CART_PRODUCT_ERROR: 'Carts Module Error: Cant Delete All Products',
   UPDATE_ALL_CART_PRODUCT_ERROR: 'Carts Module Error: Cant Update the Products'
 }
-
-const github = 'Hola';
