@@ -61,3 +61,4 @@ export const errorDictionary = {
   UPDATE_ALL_CART_PRODUCT_ERROR: 'Carts Module Error: Cant Update the Products'
 }
 
+const github = 'Hola';
