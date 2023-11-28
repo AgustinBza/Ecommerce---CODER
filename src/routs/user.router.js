@@ -8,7 +8,7 @@ const controller = new UserController();
 
 const router = Router();
 router.get('/',controller.getAllDto);
-router.get('/deleteUsers',controller.deleteUsers)
+router.delete('/deleteUsers',checkAdmin,controller.deleteUsers)
 router.post('/register',controller.register);
 router.post('/login',controller.login);
 router.get('/logout',checkAuth,controller.logout);
