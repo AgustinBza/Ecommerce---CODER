@@ -28,7 +28,7 @@ const deleteUserMsg = (first_name) => {
 };
 
 const deleteUserPremiumMsg = (first_name,title) => {
-    return `<h1>Hola ${first_name},¡Su producto "${title}" fue eliminado exitosamente!</h1>`
+    return `<h1>Hola ${first_name},¡Su producto "${title}" fue eliminado!</h1>`
 };
 
 export const sendMail = async(user, service, token = null) => {
@@ -39,11 +39,9 @@ export const sendMail = async(user, service, token = null) => {
        ? msg = createMsgRegister(first_name)
        : service === 'resetPass'
        ? msg = createMsgReset(first_name)
-       : msg = ''
-       service === 'delete'
+       : service === 'delete'
        ? msg = deleteUserMsg(first_name)
-       : msg = ''
-       service === 'deletePremium'
+       : service === 'deletePremium'
        ? msg = deleteUserPremiumMsg(first_name)
        : msg = ''
 
