@@ -214,13 +214,13 @@ export default class UserController extends Controllers {
           difference = dateUser.getTime() - dateNow.getTime();
           diasDif = (Math.round(difference/ (1000*60*60*24)) * -1)
           if(diasDif >= 2){
+              usersDeletedArray.push(userData.email)
               sendMail(userData,'delete');
               console.log(String(userData._id))
               const userDeleted = await userService.delete(String(userData._id))
-              usersDeletedArray.push(userData.email)
           }
         })
-        createResponse(res, 200, {msg:usersDeletedArray});
+        createResponse(res, 200, {Users_Deleted:usersDeletedArray});
         ;
     } catch (error) {
         logger.error(error);

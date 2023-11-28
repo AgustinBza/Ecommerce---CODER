@@ -25,7 +25,8 @@ export default class UserRepository {
                     apellido : userData.last_name,
                     edad : userData.age,
                     email : userData.email,
-                    rol : userData.role
+                    rol : userData.role,
+                    ultima_conexion: userData.last_connection
                 }
                 usersResponseDto.push(user);
             });
