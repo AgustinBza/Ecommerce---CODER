@@ -1,9 +1,11 @@
 import Controllers from "./class.controller.js";
 import UserService from "../services/user.services.js";
+import CartService from "../services/cart.services.js";
 import { createResponse, errorDictionary } from "../utils.js";
 import { logger } from '../logger.js';
 import { sendMail } from "../services/email.service.js";
 const userService = new UserService();
+const cartService = new CartService();
 
 export default class UserController extends Controllers {
   constructor() {
@@ -216,8 +218,10 @@ export default class UserController extends Controllers {
           if(diasDif >= 2){
               usersDeletedArray.push(userData.email)
               sendMail(userData,'delete');
-              console.log(String(userData._id))
+              logger.info('Id Usuario a eliminar:' + String(userData._id))
+              logger.info('Id Carrito a eliminar:' + String(userData.carts[0]));
               const userDeleted = await userService.delete(String(userData._id))
+              const cartDeleted = await cartService.delete(userData.carts[0]) 
           }
         })
         createResponse(res, 200, {Users_Deleted:usersDeletedArray});
